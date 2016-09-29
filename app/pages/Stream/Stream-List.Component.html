@@ -1,0 +1,5 @@
+﻿<watch [watchProperty] ="StreamViewList"></watch>
+
+    <streamObject *ngFor="let streamView of StreamViewList" [streamView]=streamView></streamObject>
+
+<ion-item *ngIf !="StreamViewList">No Content</ion-item>

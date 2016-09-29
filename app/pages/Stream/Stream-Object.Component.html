@@ -1,0 +1,44 @@
+﻿<watch [watchProperty] ="streamView"></watch>
+
+
+
+<ion-list>
+        
+            <ion-card>
+
+                <ion-item>
+                    <ion-avatar item-left>
+                        <img src="{{streamView.user.picture}}" />
+                    </ion-avatar>
+                    <h2>{{streamView.user.name}}</h2>
+                </ion-item>
+                <ion-item *ngFor="let stream of streamView.streams">
+                    <img src="{{stream.picture}}" alt="">
+                    <ion-card-content>
+                        {{stream.image}}
+                    </ion-card-content>
+                    <p>{{stream.content}}</p>
+                </ion-item>
+                <ion-row>                  
+                    <ion-col center text-center>
+                        <ion-note>
+                            11h ago
+                        </ion-note>
+                    </ion-col>
+                </ion-row>
+
+            </ion-card>
+
+
+
+
+
+            <ion-item *ngFor="let comment of streamView.comments">
+                <ion-avatar item-left>
+                    <img src="{{streamView.user.picture}}" />
+                </ion-avatar>
+                {{comment.comment_id}}, {{comment.content}}, {{comment.user.name}}
+
+            </ion-item>
+        
+    </ion-list>

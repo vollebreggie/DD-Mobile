@@ -1,0 +1,13 @@
+﻿<ion-header>
+    <ion-navbar>
+        <ion-title>Courses</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content padding class="courses">
+    <h2>Courses Page</h2>
+
+    <ion-item *ngFor="let course of courses" >
+        {{course.name}} {{course.content}} 
+    </ion-item>
+    
+</ion-content>

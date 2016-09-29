@@ -1,0 +1,36 @@
+﻿Stre<ion-header>
+    <ion-navbar>
+        <ion-title>Update Stream</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content> 
+    <watch [watchProperty]="source"></watch>
+    <ion-list no-lines>
+
+        <form [formGroup]="updateForm" ><!--(ngSubmit)="logForm()-->
+            <ion-item>
+                <ion-label>Title </ion-label>
+                <ion-input type="text" formControlName="title"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label>Description</ion-label>
+                <ion-textarea formControlName="description"></ion-textarea>
+            </ion-item>
+            <!--<ion-item *ngFor="let image of images">-->            
+            <ion-avatar>
+                <img [src]="base64Image" *ngIf="base64Image" />
+            </ion-avatar>
+            <button (click)="takePicture()">Take a Picture</button>
+            testing
+            <button (click)="getPicture()">get a Picture</button>
+
+
+                <button type="submit" [disabled]="!updateForm.valid">Submit</button>
+</form>
+
+    </ion-list>
+  
+</ion-content>
+
+
+
